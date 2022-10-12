@@ -1,8 +1,12 @@
 import Button from "../../Components/Button";
 import restaurantMenuStyle from "./RestaurantMenu.module.scss";
 import { ReactComponent as Logo } from "assets/logo.svg";
+import { useState } from "react";
+import SearchEngine from "./SearchEngine";
 
 export default function RestaurantMenu() {
+  const [search, setSearch] = useState("");
+
   return (
     <main>
       <nav className={restaurantMenuStyle.menu}>
@@ -13,6 +17,10 @@ export default function RestaurantMenu() {
           A casa do código e da massa
         </div>
       </header>
+      <section className={restaurantMenuStyle.menu}>
+        <h3 className={restaurantMenuStyle.menu__title}>Cardárpio</h3>
+        <SearchEngine search={search} setSearch={setSearch} />
+      </section>
       <Button />
     </main>
   );
