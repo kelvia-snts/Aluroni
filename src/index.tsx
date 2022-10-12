@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "normalize.css";
 import "./index.css";
 import RestaurantMenu from "./pages/RestaurantMenu";
 
@@ -8,6 +9,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RestaurantMenu/>
+    <RestaurantMenu />
   </React.StrictMode>
 );
