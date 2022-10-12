@@ -6,6 +6,7 @@ import Filters from "./SearchEngine/FIlters";
 
 export default function RestaurantMenu() {
   const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState<number | null>(null);
 
   return (
     <main>
@@ -21,7 +22,7 @@ export default function RestaurantMenu() {
         <h3 className={restaurantMenuStyle.menu__title}>Cardárpio</h3>
         <SearchEngine search={search} setSearch={setSearch} />
         <div className={restaurantMenuStyle.restaurantMenu__filters}>
-          <Filters />
+          <Filters filter={filter} setFilter={setFilter}/>
         </div>
       </section>
     </main>
