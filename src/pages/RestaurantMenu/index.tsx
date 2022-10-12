@@ -8,6 +8,11 @@ export default function RestaurantMenu() {
       <nav className={restaurantMenuStyle.menu}>
         <Logo />
       </nav>
+      <header className={restaurantMenuStyle.header}>
+        <div className={restaurantMenuStyle.header__text}>
+          A casa do código e da massa
+        </div>
+      </header>
       <Button />
     </main>
   );
