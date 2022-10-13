@@ -1,11 +1,14 @@
-import Button from "../../Components/Button";
 import restaurantMenuStyle from "./RestaurantMenu.module.scss";
 import { ReactComponent as Logo } from "assets/logo.svg";
 import { useState } from "react";
 import SearchEngine from "./SearchEngine";
+import Filters from "./SearchEngine/FIlters";
+import Sort from "./Sort";
 
 export default function RestaurantMenu() {
   const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState<number | null>(null);
+  const [sort, setSort] = useState("");
 
   return (
     <main>
@@ -20,8 +23,11 @@ export default function RestaurantMenu() {
       <section className={restaurantMenuStyle.menu}>
         <h3 className={restaurantMenuStyle.menu__title}>Cardárpio</h3>
         <SearchEngine search={search} setSearch={setSearch} />
+        <div className={restaurantMenuStyle.restaurantMenu__filters}>
+          <Filters filter={filter} setFilter={setFilter} />
+          <Sort sort={sort} setSort={setSort}/>
+        </div>
       </section>
-      <Button />
     </main>
   );
 }
