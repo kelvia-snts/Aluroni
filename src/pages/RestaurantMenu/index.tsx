@@ -8,6 +8,7 @@ import Sort from "./Sort";
 export default function RestaurantMenu() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
+  const [sort, setSort] = useState("");
 
   return (
     <main>
@@ -24,7 +25,7 @@ export default function RestaurantMenu() {
         <SearchEngine search={search} setSearch={setSearch} />
         <div className={restaurantMenuStyle.restaurantMenu__filters}>
           <Filters filter={filter} setFilter={setFilter} />
-          <Sort />
+          <Sort sort={sort} setSort={setSort}/>
         </div>
       </section>
     </main>
