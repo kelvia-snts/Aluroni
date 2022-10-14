@@ -1,22 +1,36 @@
-import logo from "assets/logo.svg";
 import ItemStyle from "./Item.module.scss";
+import menuItem from "../Items.json";
+import classNames from "classnames";
 
-export default function Item() {
+type Props = typeof menuItem[0];
+
+export default function Item(props: Props) {
+  const { title, description, category, size, serving, price, photo } = props;
+
   return (
     <div className={ItemStyle.item}>
       <div className={ItemStyle.item__image}>
-        <img src={logo} alt="Imagem" />
+        <img src={photo} alt={title} />
       </div>
       <div className={ItemStyle.item__description}>
         <div className={ItemStyle.item__title}>
-          <h2>Macarrão</h2>
-          <p>Descrição macarrão</p>
+          <h2>{title}</h2>
+          <p>{description}</p>
         </div>
         <div className={ItemStyle.item__tags}>
-          <div className={ItemStyle.item__type}>Massas</div>
-          <div className={ItemStyle.item__portion}>400Gr</div>
-          <div className={ItemStyle.item__qttpeople}>Serve duas pessoas</div>
-          <div className={ItemStyle.item__value}>R$ 50,00</div>
+          <div
+            className={classNames({
+              [ItemStyle.item__type]: true,
+              [ItemStyle[`item__type__${category.label.toLowerCase()}`]]: true,
+            })}
+          >
+            {category.label}
+          </div>
+          <div className={ItemStyle.item__portion}>{size}g</div>
+          <div className={ItemStyle.item__qttpeople}>
+            {serving} pessoa{serving === 1 ? "" : "s"}
+          </div>
+          <div className={ItemStyle.item__value}>{price.toFixed(2)}</div>
         </div>
       </div>
     </div>
