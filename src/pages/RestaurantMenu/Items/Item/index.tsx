@@ -28,7 +28,7 @@ export default function Item(props: Props) {
           </div>
           <div className={ItemStyle.item__portion}>{size}g</div>
           <div className={ItemStyle.item__qttpeople}>
-            {serving} pessoa{serving === 1 ? "" : "s"}
+            serve {serving} pessoa{serving === 1 ? "" : "s"}
           </div>
           <div className={ItemStyle.item__value}>{price.toFixed(2)}</div>
         </div>
