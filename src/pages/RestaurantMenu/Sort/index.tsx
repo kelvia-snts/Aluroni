@@ -5,20 +5,20 @@ import classNames from "classnames";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 interface Props {
-  sort: string;
-  setSort: React.Dispatch<React.SetStateAction<string>>;
+  orderer: string;
+  setOrderer: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function Sort({ sort, setSort }: Props) {
+export default function Sort({ orderer, setOrderer }: Props) {
   const [open, setOpen] = useState(false);
   const sortName =
-    sort && options.find((option) => option.value === sort)?.name;
+    orderer && options.find((option) => option.value === orderer)?.name;
 
   return (
     <button
       className={classNames({
         [sortStyle.sort]: true,
-        [sortStyle["sort--active"]]: sort !== "",
+        [sortStyle["sort--active"]]: orderer !== "",
       })}
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
@@ -39,7 +39,7 @@ export default function Sort({ sort, setSort }: Props) {
           <div
             className={sortStyle.sort__option}
             key={option.value}
-            onClick={() => setSort(option.value)}
+            onClick={() => setOrderer(option.value)}
           >
             {option.name}
           </div>

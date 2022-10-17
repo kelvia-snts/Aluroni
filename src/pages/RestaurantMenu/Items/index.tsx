@@ -6,12 +6,12 @@ import itemsStyle from "./Items.module.scss";
 interface Props {
   filter: number | null;
   search: string;
-  sort: string;
+  orderer: string;
 }
 
 export default function Items(props: Props) {
   const [list, setList] = useState(menuItem);
-  const { filter, search } = props;
+  const { filter, search, orderer } = props;
 
   function testSearch(title: string) {
     const regex = new RegExp(search, "i");
@@ -23,12 +23,25 @@ export default function Items(props: Props) {
     return true;
   }
 
+  function order(newList: typeof menuItem) {
+    switch (orderer) {
+      case "porcao":
+        return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
+      case "qtd_pessoas":
+        return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+      case "preco":
+        return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
+      default:
+        return newList;
+    }
+  }
+
   useEffect(() => {
     const newList = menuItem.filter(
       (item) => testSearch(item.title) && testFilter(item.category.id)
     );
-    setList(newList);
-  }, [filter, search]);
+    setList(order(newList));
+  }, [filter, search, orderer]);
 
   return (
     <div className={itemsStyle.items}>

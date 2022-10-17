@@ -9,7 +9,7 @@ import Itens from "./Items";
 export default function RestaurantMenu() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
-  const [sort, setSort] = useState("");
+  const [orderer, setOrderer] = useState("");
 
   return (
     <main>
@@ -26,9 +26,9 @@ export default function RestaurantMenu() {
         <SearchEngine search={search} setSearch={setSearch} />
         <div className={restaurantMenuStyle.restaurantMenu__filters}>
           <Filters filter={filter} setFilter={setFilter} />
-          <Sort sort={sort} setSort={setSort} />
+          <Sort orderer={orderer} setOrderer={setOrderer} />
         </div>
-        <Itens search={search} filter={filter} sort={sort}/>
+        <Itens search={search} filter={filter} orderer={orderer}/>
       </section>
     </main>
   );
