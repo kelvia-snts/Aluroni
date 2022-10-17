@@ -4,12 +4,13 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
-interface Props {
-  orderer: string;
-  setOrderer: React.Dispatch<React.SetStateAction<string>>;
+export type OptionsOrder = "" | "porcao" | "qtd_pessoas" | "preco";
+interface IOrderer {
+  orderer: OptionsOrder;
+  setOrderer: React.Dispatch<React.SetStateAction<OptionsOrder>>;
 }
 
-export default function Sort({ orderer, setOrderer }: Props) {
+export default function Sort({ orderer, setOrderer }: IOrderer) {
   const [open, setOpen] = useState(false);
   const sortName =
     orderer && options.find((option) => option.value === orderer)?.name;
@@ -39,7 +40,7 @@ export default function Sort({ orderer, setOrderer }: Props) {
           <div
             className={sortStyle.sort__option}
             key={option.value}
-            onClick={() => setOrderer(option.value)}
+            onClick={() => setOrderer(option.value as OptionsOrder)}
           >
             {option.name}
           </div>
