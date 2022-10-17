@@ -1,6 +1,6 @@
 ## Projeto desenvolvido pelo curso da plataforma ALURA - Formação React com typeScript
 
-TESTE: Clone repositório - npm i - npm start
+* TESTE: Clone repositório - npm i - npm start
 
 ![Captura de tela 2022-10-17 - 11 42 08-fullpage](https://user-images.githubusercontent.com/69319634/196207322-fe72ea3c-3b1f-4fb2-8b47-978f2fd93bf0.png)
 
