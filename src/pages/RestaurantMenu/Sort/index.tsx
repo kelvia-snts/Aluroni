@@ -1,10 +1,10 @@
-import sortStyle from "./Sort.module.scss";
-import options from "./options.json";
-import React, { useState } from "react";
-import classNames from "classnames";
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import sortStyle from './Sort.module.scss';
+import options from './options.json';
+import React, { useState } from 'react';
+import classNames from 'classnames';
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
 
-export type OptionsOrder = "" | "porcao" | "qtd_pessoas" | "preco";
+export type OptionsOrder = '' | 'porcao' | 'qtd_pessoas' | 'preco';
 interface IOrderer {
   orderer: OptionsOrder;
   setOrderer: React.Dispatch<React.SetStateAction<OptionsOrder>>;
@@ -19,12 +19,12 @@ export default function Sort({ orderer, setOrderer }: IOrderer) {
     <button
       className={classNames({
         [sortStyle.sort]: true,
-        [sortStyle["sort--active"]]: orderer !== "",
+        [sortStyle['sort--active']]: orderer !== '',
       })}
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
     >
-      <span>{sortName || "Ordenar Por"}</span>
+      <span>{sortName || 'Ordenar Por'}</span>
       {open ? (
         <MdKeyboardArrowUp size={20} />
       ) : (
@@ -33,7 +33,7 @@ export default function Sort({ orderer, setOrderer }: IOrderer) {
       <div
         className={classNames({
           [sortStyle.sort__options]: true,
-          [sortStyle["sort__options--active"]]: open,
+          [sortStyle['sort__options--active']]: open,
         })}
       >
         {options.map((option) => (

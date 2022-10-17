@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import Item from "./Item";
-import menuItem from "./Items.json";
-import itemsStyle from "./Items.module.scss";
+import { useEffect, useState } from 'react';
+import Item from './Item';
+import menuItem from './Items.json';
+import itemsStyle from './Items.module.scss';
 
 interface Props {
   filter: number | null;
@@ -14,7 +14,7 @@ export default function Items(props: Props) {
   const { filter, search, orderer } = props;
 
   function testSearch(title: string) {
-    const regex = new RegExp(search, "i");
+    const regex = new RegExp(search, 'i');
     return regex.test(title);
   }
 
@@ -25,21 +25,21 @@ export default function Items(props: Props) {
 
   const sortPropertyAscending = (
     list: typeof menuItem,
-    property: "size" | "serving" | "price"
+    property: 'size' | 'serving' | 'price'
   ) => {
     return list.sort((a, b) => (a[property] > b[property] ? 1 : -1));
   };
 
   function order(newList: typeof menuItem) {
     switch (orderer) {
-      case "porcao":
-        return sortPropertyAscending(newList, "size");
-      case "qtd_pessoas":
-        return sortPropertyAscending(newList, "serving");
-      case "preco":
-        return sortPropertyAscending(newList, "price");
-      default:
-        return newList;
+    case 'porcao':
+      return sortPropertyAscending(newList, 'size');
+    case 'qtd_pessoas':
+      return sortPropertyAscending(newList, 'serving');
+    case 'preco':
+      return sortPropertyAscending(newList, 'price');
+    default:
+      return newList;
     }
   }
 
