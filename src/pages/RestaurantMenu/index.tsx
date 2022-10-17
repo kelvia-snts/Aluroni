@@ -28,7 +28,7 @@ export default function RestaurantMenu() {
           <Filters filter={filter} setFilter={setFilter} />
           <Sort sort={sort} setSort={setSort} />
         </div>
-        <Itens />
+        <Itens search={search} filter={filter} sort={sort}/>
       </section>
     </main>
   );
