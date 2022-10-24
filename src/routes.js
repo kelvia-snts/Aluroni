@@ -1,14 +1,21 @@
+import DefaultPage from 'components/DefaultPage';
+import Menu from 'components/Menu';
 import RestaurantMenu from 'pages/RestaurantMenu';
 import Start from 'pages/Start';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function AppRouter() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Start />} />
-        <Route path="/Cardapio" element={<RestaurantMenu />} />
-      </Routes>
-    </Router>
+    <main>
+      <Router>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<DefaultPage />}>
+            <Route index element={<Start />} />
+            <Route path="cardapio" element={<RestaurantMenu />} />
+          </Route>
+        </Routes>
+      </Router>
+    </main>
   );
 }
