@@ -4,6 +4,7 @@ import SearchEngine from './SearchEngine';
 import Filters from './SearchEngine/FIlters';
 import Sort, { OptionsOrder } from './Sort';
 import Itens from './Items';
+import themeStyle from 'styles/theme.module.scss';
 
 export default function RestaurantMenu() {
   const [search, setSearch] = useState('');
@@ -12,7 +13,7 @@ export default function RestaurantMenu() {
 
   return (
     <section className={restaurantMenuStyle.menu}>
-      <h3 className={restaurantMenuStyle.menu__title}>Cardárpio</h3>
+      <h3 className={themeStyle.titulo}>Cardárpio</h3>
       <SearchEngine search={search} setSearch={setSearch} />
       <div className={restaurantMenuStyle.restaurantMenu__filters}>
         <Filters filter={filter} setFilter={setFilter} />
