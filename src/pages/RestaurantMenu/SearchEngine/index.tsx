@@ -1,5 +1,5 @@
-import SearchEngineStyle from "./SearchEngine.module.scss";
-import { CgSearch } from "react-icons/cg";
+import SearchEngineStyle from './SearchEngine.module.scss';
+import { CgSearch } from 'react-icons/cg';
 
 interface Props {
   search: string;
