@@ -11,7 +11,7 @@ export default function About() {
     <section>
       <h3 className={themeStyle.titulo}>Sobre</h3>
       <div className={style.sobreNos}>
-        <img src={casa} alt="Casa Aluroni" />
+        {/* <img src={casa} alt="Casa Aluroni" />  */}
         <div className={style.sobreNos__texto}>
           <p>
             Nós do Aluroni oferecemos a vocês, nossos queridos clientes, a Massa

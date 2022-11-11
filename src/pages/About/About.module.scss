@@ -18,10 +18,10 @@
 .imagens {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
   justify-content: space-between;
   &__imagem {
-    width: 600px;
+    width: 400px;
     img {
       border-radius: 5px;
       width: 100%;

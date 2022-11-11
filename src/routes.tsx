@@ -19,8 +19,8 @@ export default function AppRouter() {
             <Route path="cardapio" element={<RestaurantMenu />} />
             <Route path="sobre" element={<About />} />
           </Route>
+          <Route path="prato/:id" element={<Dishe />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="prato/:id" element={<Dishe />}  />
         </Routes>
         <Footer />
       </Router>
