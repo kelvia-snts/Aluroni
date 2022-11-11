@@ -1,12 +1,15 @@
 
 ## Projeto desenvolvido no curso da plataforma ALURA - Formação React com typeScript - curso: React: lidando com arquivos estáticos
 
-* TESTE: Clone repositório - npm i - npm start
+* TESTE: npm start
 
 ### Imagens:camera_flash:
 
-![localhost_3000_ (1)](https://user-images.githubusercontent.com/69319634/199366886-b175a9fe-c340-4079-a2b1-d2d48304cca0.png)
-![localhost_3000_ (2)](https://user-images.githubusercontent.com/69319634/199367218-64a511b6-c2a3-4877-a486-235b0b6ed273.png)
-![localhost_3000_prato_1](https://user-images.githubusercontent.com/69319634/200044186-c16dad91-f011-42a4-b1e0-4d4aef37d256.png)
 
+![localhost_3000_ (3)](https://user-images.githubusercontent.com/69319634/201425666-2f3234d4-5456-43b3-92c2-aafca0441c93.png)
+![localhost_3000_ (4)](https://user-images.githubusercontent.com/69319634/201425709-f2c21a24-1039-4bff-a18e-ca3d4539e298.png)
+![localhost_3000_ (5)](https://user-images.githubusercontent.com/69319634/201425990-00a2a0b6-294a-4f4a-ad69-c940e00e11f4.png)
+![localhost_3000_prato_14](https://user-images.githubusercontent.com/69319634/201426022-0d307ac9-7d0f-420e-902b-5ec92f0168d7.png)
 
+### Vídeo
+https://loom.com/share/3cf6ec9dc54948149974cab81da11446
