@@ -1,4 +1,4 @@
-## Projeto desenvolvido pelo curso da plataforma ALURA - Formação React com typeScript - curso: React: lidando com arquivos estáticos
+## Projeto desenvolvido no curso da plataforma ALURA - Formação React com typeScript - curso: React: lidando com arquivos estáticos
 
 * TESTE: Clone repositório - npm i - npm start
 
